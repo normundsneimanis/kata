@@ -1,0 +1,8 @@
+[package]
+name = "digital_sum"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pathfinding = "4.8.1"
+log = "0.4.20"
