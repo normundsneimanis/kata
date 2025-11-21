@@ -1,0 +1,11 @@
+:set textwidth=80 # column width
+:set wrapwidth=60 # wrap width
+
+:set cindent # C indenttion
+
+:set comments=sl:/*,mb:*,elx:*/ # don't know yet how it works
+
+to search filenames: insert mode -> xtrl+x -> ctrl+f
+
+
+

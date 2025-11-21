@@ -1,0 +1,10 @@
+//
+// Created by long on 11/11/25.
+//
+
+#ifndef CH02_FUNCTIONS_FILES_EXTERNAL_FILE_H
+#define CH02_FUNCTIONS_FILES_EXTERNAL_FILE_H
+
+int getValueFromUser();
+
+#endif //CH02_FUNCTIONS_FILES_EXTERNAL_FILE_H

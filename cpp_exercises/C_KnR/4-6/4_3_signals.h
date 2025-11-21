@@ -1,0 +1,7 @@
+#define NUMBER '0'
+#define SIN	'1'
+#define	EXP '2'
+#define POW '3'
+#define LAST '4'
+#define SET_VAR '5'
+#define GET_VAR '6'
