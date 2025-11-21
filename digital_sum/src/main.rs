@@ -1819,26 +1819,83 @@ fn read_line_strings() -> Result<Vec<String>, String> {
 
 
 // 6 A Triangle
+// fn main() -> Result<(), Box<dyn std::error::Error>> {
+//     let mut nums = read_line_i32(None)?;
+//     fn triangle(a: i32, b: i32, c:i32) -> bool {
+//         a+b>c && a+c>b && b+c>a
+//     }
+//
+//     fn segment(a: i32, b: i32, c:i32) -> bool {
+//         a+b==c || a+c==b || b+c==a
+//     }
+//
+//     if triangle(nums[0], nums[1], nums[2]) || triangle(nums[0], nums[1], nums[3])
+//     || triangle(nums[0], nums[2], nums[3]) || triangle(nums[1], nums[2], nums[3])  {
+//         println!("TRIANGLE");
+//         return Ok(());
+//     }
+//     if segment(nums[0], nums[1], nums[2]) || segment(nums[0], nums[1], nums[3])
+//         || segment(nums[0], nums[2], nums[3]) || segment(nums[1], nums[2], nums[3]) {
+//         println!("SEGMENT");
+//         return Ok(());
+//     }
+//     println!("IMPOSSIBLE");
+//     Ok(())
+// }
+
+// 9 A Die Roll
+// fn main() -> Result<(), Box<dyn std::error::Error>> {
+//     let mut nums = read_line_i32(None)?;
+//
+//     if nums.contains(&6) {
+//         println!("1/6");
+//     } else if nums.contains(&5) {
+//         println!("1/3");
+//     } else if nums.contains(&4) {
+//         println!("1/2");
+//     } else if nums.contains(&3) {
+//         println!("2/3");
+//     } else if nums.contains(&2) {
+//         println!("5/6");
+//     } else {
+//         println!("1/1");
+//     }
+//     Ok(())
+// }
+
+
+// // 10/A Power Consumption Calculation
+// fn main() -> Result<(), Box<dyn std::error::Error>> {
+//     let mut nums = read_line_i32(None)?;
+//
+//     let (n, p1, p2, p3, t1, t2) = (nums[0], nums[1],nums[2], nums[3], nums[4],nums[5]);
+//
+//     let mut total = 0;
+//     for _test_n in 0..n {
+//         let work = read_line_i32(Some(2))?;
+//         let (l_i, r_i) = (work[0], work[1]);
+//         total += (r_i - l_i) * p1;
+//         total +=
+//     }
+//     Ok(())
+// }
+
+// 12/A Super Agent
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let mut nums = read_line_i32(None)?;
-    fn triangle(a: i32, b: i32, c:i32) -> bool {
-        a+b>c && a+c>b && b+c>a
+    let mut nums_l1 = read_line_strings()?;
+    let mut nums_l2 = read_line_strings()?;
+    let mut nums_l3 = read_line_strings()?;
+
+
+
+    if nums_l1[0].chars().nth(0) != nums_l3[0].chars().nth(2) ||
+        nums_l1[0].chars().nth(1) != nums_l3[0].chars().nth(1) ||
+        nums_l1[0].chars().nth(2) != nums_l3[0].chars().nth(0) ||
+        nums_l2[0].chars().nth(0) != nums_l2[0].chars().nth(2) {
+        println!("NO");
+    } else {
+        println!("YES");
     }
 
-    fn segment(a: i32, b: i32, c:i32) -> bool {
-        a+b==c || a+c==b || b+c==a
-    }
-
-    if triangle(nums[0], nums[1], nums[2]) || triangle(nums[0], nums[1], nums[3])
-    || triangle(nums[0], nums[2], nums[3]) || triangle(nums[1], nums[2], nums[3])  {
-        println!("TRIANGLE");
-        return Ok(());
-    }
-    if segment(nums[0], nums[1], nums[2]) || segment(nums[0], nums[1], nums[3])
-        || segment(nums[0], nums[2], nums[3]) || segment(nums[1], nums[2], nums[3]) {
-        println!("SEGMENT");
-        return Ok(());
-    }
-    println!("IMPOSSIBLE");
     Ok(())
 }
