@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <cstdio>
 
 using std::cin;
 using std::cout;
@@ -26,8 +27,10 @@ int main() {
         vector<int> dp(number_of_legs + 1, 0);
         dp[0] = 1;
 
+        cout << "dp[i] += dp[i - leg]:" << endl;
         for (const int leg : legs) {
             for (int i = leg; i <= number_of_legs; ++i) {
+                printf("dp[%d] += dp[%d - %d] [%d]: %d;\n", i, i, leg, (i - leg), dp[i - leg]);
                 dp[i] += dp[i - leg];
             }
         }
